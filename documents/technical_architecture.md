@@ -195,6 +195,16 @@ several runs.
 - **Semantics are unmeasured.** An inverted chart axis is geometrically perfect.
 - **Missing glyphs are invisible.** A tofu box is a text node with fine contrast,
   which is why fonts are baked into the image rather than assumed.
-- **Corpus false-positive rates are unlabelled.** Tuning against the corpus is how
-  overlap detection was over-suppressed into missing real collisions; the
-  human-labelled set is the only ground truth.
+- **Corpus false positives are a known, named class.** 9 of 50 non-deck corpus
+  files report a collision. Inspecting the renders (not the class names) confirms
+  the top cases are all deliberate overlays: a floating settings drawer with a
+  close button (`tweaks`), a rotated pullquote card laid across a numbered list
+  (`digital-eguide`), an annotation float pinned over a KPI (`wireframe-greybox`).
+  Rotated elements are a systematic contributor -- a CSS transform inflates the
+  bounding box well beyond the visual footprint.
+
+  These are **not** filtered out. Doing so would need exclusions validated
+  against more than three positive examples, and over-tuning against this
+  unlabelled corpus is exactly how overlap detection was previously suppressed
+  into missing real collisions. The human-labelled set remains the only ground
+  truth, and every filter change is checked against it.

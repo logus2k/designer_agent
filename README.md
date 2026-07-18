@@ -68,6 +68,11 @@ ground truth in the project, and it reset several assumptions.
 One scored a perfect 0 and was ranked worst of all. `passed: true` means *no detected breakage*,
 which is a weaker statement than it sounds.
 
+*(Those figures describe the verifier **as reviewed**. Surface-collision detection was added in
+response, and the artifact ranked worst now scores 300 rather than 0 — so the headline number
+overstates today's false-negative rate. Re-deriving it honestly needs a fresh blind review
+against the current build; until then, treat 4-of-8 as the pre-fix baseline.)*
+
 **Surface collisions are the strongest predictor.** Elements that *paint* — a card drawn over a
 card, a sidebar bleeding across a header — flagged the reviewer's entire bottom tier with zero
 false positives (TP 3, FP 0, FN 0). This was missed for most of development because overlap

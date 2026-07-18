@@ -168,20 +168,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 14,
+     "P0": 13,
      "P1": 33,
      "P2": 0
     },
-    "penalty": 1730
+    "penalty": 1630
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 14,
+     "P0": 13,
      "P1": 8,
      "P2": 25
     },
-    "penalty": 1505
+    "penalty": 1405
    }
   },
   {
@@ -398,20 +398,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 57,
+     "P0": 47,
      "P1": 21,
      "P2": 0
     },
-    "penalty": 5910
+    "penalty": 4910
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 57,
+     "P0": 47,
      "P1": 0,
      "P2": 21
     },
-    "penalty": 5721
+    "penalty": 4721
    }
   },
   {
@@ -559,20 +559,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 38,
+     "P0": 36,
      "P1": 115,
      "P2": 1
     },
-    "penalty": 4951
+    "penalty": 4751
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 38,
+     "P0": 36,
      "P1": 10,
      "P2": 106
     },
-    "penalty": 4006
+    "penalty": 3806
    }
   },
   {
@@ -674,20 +674,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 8,
+     "P0": 6,
      "P1": 28,
      "P2": 0
     },
-    "penalty": 1080
+    "penalty": 880
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 8,
+     "P0": 6,
      "P1": 0,
      "P2": 28
     },
-    "penalty": 828
+    "penalty": 628
    }
   },
   {
@@ -743,20 +743,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 5,
+     "P0": 3,
      "P1": 1,
      "P2": 0
     },
-    "penalty": 510
+    "penalty": 310
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 5,
+     "P0": 3,
      "P1": 1,
      "P2": 0
     },
-    "penalty": 510
+    "penalty": 310
    }
   },
   {
@@ -812,20 +812,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 51,
+     "P0": 34,
      "P1": 16,
      "P2": 3
     },
-    "penalty": 5263
+    "penalty": 3563
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 51,
+     "P0": 34,
      "P1": 12,
      "P2": 7
     },
-    "penalty": 5227
+    "penalty": 3527
    }
   },
   {
@@ -950,20 +950,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 20,
+     "P0": 19,
      "P1": 8,
      "P2": 0
     },
-    "penalty": 2080
+    "penalty": 1980
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 20,
+     "P0": 19,
      "P1": 8,
      "P2": 0
     },
-    "penalty": 2080
+    "penalty": 1980
    }
   },
   {
@@ -1111,20 +1111,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 19,
-     "P1": 17,
+     "P0": 15,
+     "P1": 5,
      "P2": 0
     },
-    "penalty": 2070
+    "penalty": 1550
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 19,
-     "P1": 17,
+     "P0": 15,
+     "P1": 5,
      "P2": 0
     },
-    "penalty": 2070
+    "penalty": 1550
    }
   },
   {
@@ -1224,22 +1224,22 @@
    "elements": 19,
    "text_nodes": 11,
    "strict_aa": {
-    "passed": false,
+    "passed": true,
     "counts": {
      "P0": 0,
-     "P1": 7,
+     "P1": 0,
      "P2": 0
     },
-    "penalty": 70
+    "penalty": 0
    },
    "split_gate": {
-    "passed": false,
+    "passed": true,
     "counts": {
      "P0": 0,
-     "P1": 7,
+     "P1": 0,
      "P2": 0
     },
-    "penalty": 70
+    "penalty": 0
    }
   },
   {
@@ -1272,20 +1272,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 25,
+     "P0": 22,
      "P1": 13,
      "P2": 3
     },
-    "penalty": 2633
+    "penalty": 2333
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 25,
+     "P0": 22,
      "P1": 7,
      "P2": 9
     },
-    "penalty": 2579
+    "penalty": 2279
    }
   },
   {
@@ -1295,20 +1295,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 38,
+     "P0": 9,
      "P1": 7,
      "P2": 0
     },
-    "penalty": 3870
+    "penalty": 970
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 38,
+     "P0": 9,
      "P1": 1,
      "P2": 6
     },
-    "penalty": 3816
+    "penalty": 916
    }
   },
   {
@@ -1318,20 +1318,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 3,
+     "P0": 0,
      "P1": 2,
      "P2": 0
     },
-    "penalty": 320
+    "penalty": 20
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 3,
+     "P0": 0,
      "P1": 2,
      "P2": 0
     },
-    "penalty": 320
+    "penalty": 20
    }
   },
   {
@@ -1364,20 +1364,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 14,
+     "P0": 12,
      "P1": 5,
      "P2": 0
     },
-    "penalty": 1450
+    "penalty": 1250
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 14,
+     "P0": 12,
      "P1": 5,
      "P2": 0
     },
-    "penalty": 1450
+    "penalty": 1250
    }
   },
   {
@@ -1387,20 +1387,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 28,
+     "P0": 24,
      "P1": 19,
      "P2": 0
     },
-    "penalty": 2990
+    "penalty": 2590
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 28,
+     "P0": 24,
      "P1": 1,
      "P2": 18
     },
-    "penalty": 2828
+    "penalty": 2428
    }
   },
   {
@@ -1571,20 +1571,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 46,
+     "P0": 42,
      "P1": 5,
      "P2": 0
     },
-    "penalty": 4650
+    "penalty": 4250
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 46,
+     "P0": 42,
      "P1": 4,
      "P2": 1
     },
-    "penalty": 4641
+    "penalty": 4241
    }
   },
   {
@@ -1640,20 +1640,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 19,
+     "P0": 15,
      "P1": 9,
      "P2": 0
     },
-    "penalty": 1990
+    "penalty": 1590
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 19,
+     "P0": 15,
      "P1": 4,
      "P2": 5
     },
-    "penalty": 1945
+    "penalty": 1545
    }
   },
   {
@@ -1709,20 +1709,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 8,
+     "P0": 3,
      "P1": 6,
      "P2": 0
     },
-    "penalty": 860
+    "penalty": 360
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 8,
+     "P0": 3,
      "P1": 0,
      "P2": 6
     },
-    "penalty": 806
+    "penalty": 306
    }
   },
   {
@@ -1755,20 +1755,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 179,
+     "P0": 178,
      "P1": 11,
      "P2": 10
     },
-    "penalty": 18020
+    "penalty": 17920
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 179,
+     "P0": 178,
      "P1": 7,
      "P2": 14
     },
-    "penalty": 17984
+    "penalty": 17884
    }
   },
   {
@@ -1985,20 +1985,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 40,
+     "P0": 32,
      "P1": 0,
      "P2": 0
     },
-    "penalty": 4000
+    "penalty": 3200
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 40,
+     "P0": 32,
      "P1": 0,
      "P2": 0
     },
-    "penalty": 4000
+    "penalty": 3200
    }
   },
   {
@@ -2031,20 +2031,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 58,
+     "P0": 55,
      "P1": 5,
      "P2": 1
     },
-    "penalty": 5851
+    "penalty": 5551
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 58,
+     "P0": 55,
      "P1": 0,
      "P2": 6
     },
-    "penalty": 5806
+    "penalty": 5506
    }
   },
   {
@@ -2123,20 +2123,20 @@
    "strict_aa": {
     "passed": false,
     "counts": {
-     "P0": 28,
+     "P0": 23,
      "P1": 14,
      "P2": 6
     },
-    "penalty": 2946
+    "penalty": 2446
    },
    "split_gate": {
     "passed": false,
     "counts": {
-     "P0": 28,
+     "P0": 23,
      "P1": 4,
      "P2": 16
     },
-    "penalty": 2856
+    "penalty": 2356
    }
   },
   {
@@ -2193,19 +2193,19 @@
     "passed": false,
     "counts": {
      "P0": 3,
-     "P1": 55,
+     "P1": 36,
      "P2": 0
     },
-    "penalty": 850
+    "penalty": 660
    },
    "split_gate": {
     "passed": false,
     "counts": {
      "P0": 3,
-     "P1": 25,
+     "P1": 6,
      "P2": 30
     },
-    "penalty": 580
+    "penalty": 390
    }
   },
   {

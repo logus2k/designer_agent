@@ -362,13 +362,18 @@ def run_plan(tasks: list[dict], outdir: str, **kw) -> dict:
     """Run every kind=design task in a plan. Non-design tasks are skipped."""
     os.makedirs(outdir, exist_ok=True)
     reports = []
+    skipped: dict = {}
     for raw in tasks:
         if raw.get("kind") not in (None, "design"):
+            k = raw.get("kind") or "unknown"
+            skipped[k] = skipped.get(k, 0) + 1
             continue
         task = DesignTask.from_dict(raw)
         wd = os.path.join(outdir, task.task_id)
         reports.append(run_task(task, wd, **kw))
-    summary = {"total": len(reports),
+    # Misclassification upstream is silent otherwise: a UI-heavy project whose
+    # plan contains no design tasks looks identical to a plan with none needed.
+    summary = {"total": len(reports), "skipped_by_kind": skipped,
                "designed": sum(1 for r in reports if r["outcome"] == "designed"),
                "defective": sum(1 for r in reports if r["outcome"] == "defective"),
                "failed": sum(1 for r in reports

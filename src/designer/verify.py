@@ -163,14 +163,43 @@ def tier2(audit: dict, required_components: list[str] | None = None,
                                f'({int(o["fraction_of_smaller"] * 100)}% of the '
                                f'smaller element is covered)'})
 
+    # One structural fault (a grid overflowing the panel below it) surfaces as
+    # many element pairs. A measured run showed four identical findings crowding
+    # the revision prompt while the model fixed none of them -- so collapse by
+    # the pair of *kinds* involved and describe the fix geometrically.
+    groups: dict = {}
     for c in audit.get("surface_collisions", []):
         if c["fraction"] < th.surface_collision_min:
             continue
+        key = (c["a"].split(">")[-1], c["b"].split(">")[-1])
+        g = groups.setdefault(key, {"n": 0, "worst": c})
+        g["n"] += 1
+        if c["fraction"] > g["worst"]["fraction"]:
+            g["worst"] = c
+    for (ka, kb), g in groups.items():
+        c = g["worst"]
+        ar, br = c.get("a_rect"), c.get("b_rect")
+        where = ""
+        if ar and br:
+            dx, dy = c.get("dx", 0), c.get("dy", 0)
+            # Say which direction to move, in the units the model wrote the CSS in.
+            if dy and dx and dy <= dx:
+                dirn = ("upward into" if ar[1] < br[1] else "downward into")
+                where = (f"; it extends {dy}px {dirn} the other element's row "
+                         f"-- give the container {dy}px more height or move the "
+                         f"following block down")
+            elif dx:
+                dirn = ("leftward into" if ar[0] < br[0] else "rightward into")
+                where = (f"; it extends {dx}px {dirn} the other element's column "
+                         f"-- reduce its width or the number of items per row")
+            where += (f" [{ka} at x={ar[0]},y={ar[1]} {ar[2]}x{ar[3]}; "
+                      f"{kb} at x={br[0]},y={br[1]} {br[2]}x{br[3]}]")
+        count = f" ({g['n']} element pairs affected)" if g["n"] > 1 else ""
         out.append({"severity": th.surface_collision_severity,
                     "rule": "surface-collision", "path": c["a"],
-                    "message": f'{c["a"]} is drawn over {c["b"]} '
-                               f'({int(c["fraction"] * 100)}% of the smaller '
-                               f'element is covered, {c["overlap_px"]}px2)'})
+                    "message": f'{ka} is drawn over {kb}'
+                               f'{count} -- {int(c["fraction"] * 100)}% of the '
+                               f'smaller element is covered{where}'})
 
     for e in audit.get("edge_touching", []):
         if e["gap_px"] >= th.edge_gutter_min_px:

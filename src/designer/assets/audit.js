@@ -280,6 +280,13 @@ function collect() {
         collisions.push({
           a: pathOf(a.el), b: pathOf(b.el),
           fraction: +frac.toFixed(3), overlap_px: Math.round(area),
+          // geometry the model needs to reason about a fix
+          a_rect: [Math.round(a.r.left), Math.round(a.r.top),
+                   Math.round(a.r.width), Math.round(a.r.height)],
+          b_rect: [Math.round(b.r.left), Math.round(b.r.top),
+                   Math.round(b.r.width), Math.round(b.r.height)],
+          dx: Math.round(ox), dy: Math.round(oy),
+          a_tag: a.el.tagName.toLowerCase(), b_tag: b.el.tagName.toLowerCase(),
         });
       }
     }
@@ -295,7 +302,13 @@ function collect() {
   for (const b of boxes) {
     if (!b.text) continue;
     if (b.r.width >= VW - 2) continue;           // full-bleed by design
-    const left = b.r.left, right = VW - b.r.right;
+    /* Measure to where the TEXT starts, not the box. A block-level link inside a
+     * padded sidebar has its box at x=0 while its content is inset -- the box
+     * edge is not the visual gutter. */
+    const pcs = getComputedStyle(b.el);
+    const padL = parseFloat(pcs.paddingLeft) || 0;
+    const padR = parseFloat(pcs.paddingRight) || 0;
+    const left = b.r.left + padL, right = (VW - b.r.right) + padR;
     const gap = Math.min(left, right);
     if (gap < 0) continue;                        // that is overflow, not gutter
     if (gap < 8) {
