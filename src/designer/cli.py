@@ -67,6 +67,12 @@ def _cmd_check(args) -> int:
 
 def _cmd_audit(args) -> int:
     from . import designsystem, render, verify
+    if not os.path.isfile(args.file):
+        print(f"audit: no such file: {args.file}")
+        return 2
+    if not args.file.lower().endswith((".html", ".htm")):
+        print(f"audit: expects an HTML file, got {os.path.splitext(args.file)[1] or 'no extension'}")
+        return 2
     palette = []
     if args.design_system:
         palette = designsystem.load(args.design_system).palette()

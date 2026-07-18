@@ -47,7 +47,7 @@ So judgement is layered, and **only measurements gate**:
 | Tier | What it checks | Gates? |
 |---|---|---|
 | **1. Structural** | file produced, HTML parses, no stub fingerprints (TODO, lorem ipsum, `[REPLACE]`) | yes |
-| **2. Geometry** | viewport & content overflow, overlapping text, contrast ratios, off-palette colours, edge gutters, missing components, tap targets | yes |
+| **2. Geometry** | **surface collisions**, viewport & content overflow, contrast ratios, off-palette colours, edge gutters, missing components, tap targets | yes |
 | **3. Visual** | a vision model looks at a screenshot and names concrete defects | **never** |
 
 Tier 2 runs in-page inside the rendered document and returns numbers, so a finding is an
@@ -59,16 +59,33 @@ but its verdict field carries no information, so it only ever contributes revisi
 that assert taste rather than naming a visible element are filtered out before they reach the
 model.
 
-### Measured behaviour
+### Measured against human judgement
 
-On a good/bad fixture pair, the deterministic tiers separate cleanly (penalty 20 vs 2510). The
-vision tier **missed both geometry defects** the deterministic tiers caught instantly — a
-headline overflowing its box and a badge covering it. Neither tier subsumes the other.
+The verifier has been checked against a human ranking 14 generated artifacts blind — the only
+ground truth in the project, and it reset several assumptions.
 
-Validated against 106 real design artifacts: 0 probe errors. Iterating on that corpus removed
-~98% of false-positive overlap findings (7,476 → 139) by learning to recognise deliberate
-stacking — deck slides, carousels, marquees — without losing a single true positive on the
-fixtures.
+**`passed` is not a quality claim.** Of 8 artifacts scoring penalty 0, the reviewer accepted 4.
+One scored a perfect 0 and was ranked worst of all. `passed: true` means *no detected breakage*,
+which is a weaker statement than it sounds.
+
+**Surface collisions are the strongest predictor.** Elements that *paint* — a card drawn over a
+card, a sidebar bleeding across a header — flagged the reviewer's entire bottom tier with zero
+false positives (TP 3, FP 0, FN 0). This was missed for most of development because overlap
+detection compared only text-bearing elements; the colliding things are containers, which have
+no direct text node.
+
+**Vision cannot substitute for geometry here.** A purpose-written occlusion prompt scored **0/3
+recall** on confirmed collisions. The reason is structural: occlusion destroys its own evidence.
+The DOM knows two boxes intersect; the pixels only show the winner. Vision's value is elsewhere
+— it catches missing axis labels and undersized icons, which geometry can never see.
+
+Also validated against 106 real design artifacts: 0 probe errors. Iterating on that corpus
+removed ~98% of false-positive overlap findings by learning to recognise deliberate stacking
+(deck slides, carousels, marquees) — but that same tuning is what created the collision blind
+spot, so filters are now only trusted when the human-labelled set confirms them.
+
+Design decisions and the failures behind them are in
+[`documents/technical_architecture.md`](documents/technical_architecture.md).
 
 ---
 
@@ -171,10 +188,15 @@ without re-rendering anything.
 Stated plainly, because the gap between "runs" and "reliable" is where this kind of tool usually
 oversells itself:
 
-- **Convergence depends on the template.** Across repeated runs, a seed-based template converged
-  5/5 (median penalty 0); a prompt-only one converged 1/5 (median 101). Revision sometimes
-  no-ops entirely, and occasionally regresses — which is why the best-scoring artifact is kept
-  rather than the last.
+- **Convergence depends on the task.** With the full checks active, a landing-page task converged
+  3/3 (`[20,0]`, `[20,0]`, `[0]`); a dashboard task converged 1/3. Revision sometimes no-ops
+  entirely (`[531,531,531]`) and occasionally regresses (`[20,0,70]`) — which is why the
+  best-scoring artifact is kept rather than the last.
+- **Detection is not remediation.** In one run the model was handed four P0 surface-collision
+  findings at the top of its revision prompt, twice, and fixed neither — it fixed a lower-priority
+  contrast issue instead and the collision count stayed at 4, 4, 4. A colour fix is local; a
+  collision fix means reasoning about the grid that caused it. Findings are also currently
+  emitted per element pair, so one structural fault can appear four times and crowd the message.
 - **One artifact at a time.** A real frontend is several screens sharing navigation and tokens;
   cross-artifact consistency is not checked.
 - **No planner integration yet.** Tasks are currently hand-written; `surface` and `kind` are not

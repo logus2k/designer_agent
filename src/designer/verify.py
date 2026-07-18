@@ -41,6 +41,10 @@ class Thresholds:
     # own overflow-x:hidden + spilling content is usually deliberate clipping
     content_clipped_severity: str = "P2"
     overlap_p0_fraction: float = 0.35    # fraction of smaller element covered
+    # painted surfaces intersecting -- validated against human review as the
+    # single strongest predictor of a page being rejected outright
+    surface_collision_min: float = 0.02
+    surface_collision_severity: str = "P0"
     overlap_min_fraction: float = 0.10   # below this, not reported at all
 
     # --- palette / targets ---
@@ -158,6 +162,15 @@ def tier2(audit: dict, required_components: list[str] | None = None,
                     "message": f'{o["a"]} overlaps {o["b"]} '
                                f'({int(o["fraction_of_smaller"] * 100)}% of the '
                                f'smaller element is covered)'})
+
+    for c in audit.get("surface_collisions", []):
+        if c["fraction"] < th.surface_collision_min:
+            continue
+        out.append({"severity": th.surface_collision_severity,
+                    "rule": "surface-collision", "path": c["a"],
+                    "message": f'{c["a"]} is drawn over {c["b"]} '
+                               f'({int(c["fraction"] * 100)}% of the smaller '
+                               f'element is covered, {c["overlap_px"]}px2)'})
 
     for e in audit.get("edge_touching", []):
         if e["gap_px"] >= th.edge_gutter_min_px:
