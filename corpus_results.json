@@ -1,0 +1,2443 @@
+{
+ "rows": [
+  {
+   "name": "audio-jingle",
+   "elements": 19,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 2,
+     "P2": 0
+    },
+    "penalty": 120
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 2
+    },
+    "penalty": 102
+   }
+  },
+  {
+   "name": "blog-post",
+   "elements": 42,
+   "text_nodes": 33,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 2,
+     "P2": 0
+    },
+    "penalty": 120
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 2
+    },
+    "penalty": 102
+   }
+  },
+  {
+   "name": "clinical-case-report",
+   "elements": 288,
+   "text_nodes": 218,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 3,
+     "P2": 0
+    },
+    "penalty": 30
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 3
+   }
+  },
+  {
+   "name": "contact-widget",
+   "elements": 48,
+   "text_nodes": 13,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 2,
+     "P2": 1
+    },
+    "penalty": 321
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 303
+   }
+  },
+  {
+   "name": "critique",
+   "elements": 239,
+   "text_nodes": 165,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 12,
+     "P2": 0
+    },
+    "penalty": 1320
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 7,
+     "P2": 5
+    },
+    "penalty": 1275
+   }
+  },
+  {
+   "name": "dashboard",
+   "elements": 100,
+   "text_nodes": 63,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 10
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 1
+   }
+  },
+  {
+   "name": "dating-web",
+   "elements": 140,
+   "text_nodes": 74,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 42,
+     "P2": 0
+    },
+    "penalty": 520
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 42
+    },
+    "penalty": 142
+   }
+  },
+  {
+   "name": "digital-eguide",
+   "elements": 93,
+   "text_nodes": 60,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 10,
+     "P1": 33,
+     "P2": 0
+    },
+    "penalty": 1330
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 10,
+     "P1": 8,
+     "P2": 25
+    },
+    "penalty": 1105
+   }
+  },
+  {
+   "name": "docs-page",
+   "elements": 64,
+   "text_nodes": 49,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 3,
+     "P2": 0
+    },
+    "penalty": 30
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 3
+   }
+  },
+  {
+   "name": "email-marketing",
+   "elements": 67,
+   "text_nodes": 32,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 3,
+     "P2": 3
+    },
+    "penalty": 333
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 6
+    },
+    "penalty": 306
+   }
+  },
+  {
+   "name": "eng-runbook",
+   "elements": 184,
+   "text_nodes": 123,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 6,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 600
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 6,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 600
+   }
+  },
+  {
+   "name": "finance-report",
+   "elements": 175,
+   "text_nodes": 109,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 14,
+     "P2": 0
+    },
+    "penalty": 140
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 14
+    },
+    "penalty": 14
+   }
+  },
+  {
+   "name": "flowai-live-dashboard-template",
+   "elements": 1,
+   "text_nodes": 0,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "gamified-app",
+   "elements": 123,
+   "text_nodes": 75,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 17,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 1710
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 17,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 1701
+   }
+  },
+  {
+   "name": "github-dashboard",
+   "elements": 265,
+   "text_nodes": 113,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 23,
+     "P1": 13,
+     "P2": 0
+    },
+    "penalty": 2430
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 23,
+     "P1": 0,
+     "P2": 13
+    },
+    "penalty": 2313
+   }
+  },
+  {
+   "name": "hr-onboarding",
+   "elements": 213,
+   "text_nodes": 119,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 11,
+     "P2": 0
+    },
+    "penalty": 210
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 11
+    },
+    "penalty": 111
+   }
+  },
+  {
+   "name": "html-ppt-course-module",
+   "elements": 175,
+   "text_nodes": 125,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 14,
+     "P2": 0
+    },
+    "penalty": 1340
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 0,
+     "P2": 14
+    },
+    "penalty": 1214
+   }
+  },
+  {
+   "name": "html-ppt-graphify-dark-graph",
+   "elements": 180,
+   "text_nodes": 106,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 38,
+     "P1": 21,
+     "P2": 0
+    },
+    "penalty": 4010
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 38,
+     "P1": 0,
+     "P2": 21
+    },
+    "penalty": 3821
+   }
+  },
+  {
+   "name": "html-ppt-hermes-cyber-terminal",
+   "elements": 193,
+   "text_nodes": 109,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 6,
+     "P2": 0
+    },
+    "penalty": 160
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 6
+    },
+    "penalty": 106
+   }
+  },
+  {
+   "name": "html-ppt-knowledge-arch-blueprint",
+   "elements": 172,
+   "text_nodes": 118,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 29,
+     "P1": 4,
+     "P2": 0
+    },
+    "penalty": 2940
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 29,
+     "P1": 0,
+     "P2": 4
+    },
+    "penalty": 2904
+   }
+  },
+  {
+   "name": "html-ppt-obsidian-claude-gradient",
+   "elements": 108,
+   "text_nodes": 80,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 35,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3500
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 35,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3500
+   }
+  },
+  {
+   "name": "html-ppt-pitch-deck",
+   "elements": 154,
+   "text_nodes": 90,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 13,
+     "P1": 12,
+     "P2": 0
+    },
+    "penalty": 1420
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 13,
+     "P1": 1,
+     "P2": 11
+    },
+    "penalty": 1321
+   }
+  },
+  {
+   "name": "html-ppt-presenter-mode-reveal",
+   "elements": 131,
+   "text_nodes": 87,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 18,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 1810
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 18,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 1810
+   }
+  },
+  {
+   "name": "html-ppt-product-launch",
+   "elements": 115,
+   "text_nodes": 73,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 15,
+     "P1": 7,
+     "P2": 1
+    },
+    "penalty": 1571
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 15,
+     "P1": 0,
+     "P2": 8
+    },
+    "penalty": 1508
+   }
+  },
+  {
+   "name": "html-ppt-taste-brutalist",
+   "elements": 538,
+   "text_nodes": 400,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 29,
+     "P1": 115,
+     "P2": 1
+    },
+    "penalty": 4051
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 29,
+     "P1": 10,
+     "P2": 106
+    },
+    "penalty": 3106
+   }
+  },
+  {
+   "name": "html-ppt-taste-editorial",
+   "elements": 322,
+   "text_nodes": 221,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 7,
+     "P1": 75,
+     "P2": 10
+    },
+    "penalty": 1460
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 7,
+     "P1": 0,
+     "P2": 85
+    },
+    "penalty": 785
+   }
+  },
+  {
+   "name": "html-ppt-tech-sharing",
+   "elements": 146,
+   "text_nodes": 97,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 9,
+     "P2": 0
+    },
+    "penalty": 190
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 109
+   }
+  },
+  {
+   "name": "html-ppt-testing-safety-alert",
+   "elements": 196,
+   "text_nodes": 125,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 46,
+     "P2": 0
+    },
+    "penalty": 660
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 46
+    },
+    "penalty": 246
+   }
+  },
+  {
+   "name": "html-ppt-weekly-report",
+   "elements": 174,
+   "text_nodes": 105,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 14,
+     "P1": 31,
+     "P2": 0
+    },
+    "penalty": 1710
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 14,
+     "P1": 0,
+     "P2": 31
+    },
+    "penalty": 1431
+   }
+  },
+  {
+   "name": "html-ppt-xhs-pastel-card",
+   "elements": 165,
+   "text_nodes": 97,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 28,
+     "P2": 0
+    },
+    "penalty": 680
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 0,
+     "P2": 28
+    },
+    "penalty": 428
+   }
+  },
+  {
+   "name": "html-ppt-xhs-white-editorial",
+   "elements": 201,
+   "text_nodes": 116,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 26,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 2610
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 26,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 2601
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-8-bit-orbit",
+   "elements": 435,
+   "text_nodes": 110,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 70,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 7000
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 70,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 7000
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-biennale-yellow",
+   "elements": 201,
+   "text_nodes": 125,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 110
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 110
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-block-frame",
+   "elements": 18,
+   "text_nodes": 7,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-blue-professional",
+   "elements": 290,
+   "text_nodes": 165,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 24,
+     "P1": 2,
+     "P2": 1
+    },
+    "penalty": 2421
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 24,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 2403
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-bold-poster",
+   "elements": 226,
+   "text_nodes": 170,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 28,
+     "P1": 16,
+     "P2": 3
+    },
+    "penalty": 2963
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 28,
+     "P1": 12,
+     "P2": 7
+    },
+    "penalty": 2927
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-broadside",
+   "elements": 25,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 16
+    },
+    "penalty": 116
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 16
+    },
+    "penalty": 116
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-capsule",
+   "elements": 194,
+   "text_nodes": 115,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 32,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3200
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 32,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3200
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-cartesian",
+   "elements": 24,
+   "text_nodes": 8,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 4,
+     "P2": 0
+    },
+    "penalty": 40
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 4
+    },
+    "penalty": 4
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-cobalt-grid",
+   "elements": 371,
+   "text_nodes": 123,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 100
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 100
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-coral",
+   "elements": 34,
+   "text_nodes": 9,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 300
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 300
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-creative-mode",
+   "elements": 180,
+   "text_nodes": 102,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 18,
+     "P1": 8,
+     "P2": 0
+    },
+    "penalty": 1880
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 18,
+     "P1": 8,
+     "P2": 0
+    },
+    "penalty": 1880
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-daisy-days",
+   "elements": 600,
+   "text_nodes": 125,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 9,
+     "P1": 9,
+     "P2": 0
+    },
+    "penalty": 990
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 9,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 909
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-editorial-tri-tone",
+   "elements": 228,
+   "text_nodes": 135,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 1100
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 1100
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-grove",
+   "elements": 20,
+   "text_nodes": 3,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 12
+    },
+    "penalty": 212
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 12
+    },
+    "penalty": 212
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-long-table",
+   "elements": 217,
+   "text_nodes": 144,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 1,
+     "P2": 1
+    },
+    "penalty": 111
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 2
+    },
+    "penalty": 102
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-mat",
+   "elements": 24,
+   "text_nodes": 8,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 1,
+     "P2": 10
+    },
+    "penalty": 120
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 11
+    },
+    "penalty": 111
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-monochrome",
+   "elements": 24,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 16
+    },
+    "penalty": 116
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 16
+    },
+    "penalty": 116
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-neo-grid-bold",
+   "elements": 423,
+   "text_nodes": 192,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 17,
+     "P2": 0
+    },
+    "penalty": 470
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 17,
+     "P2": 0
+    },
+    "penalty": 470
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-peoples-platform",
+   "elements": 223,
+   "text_nodes": 136,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 33,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3300
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 33,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 3300
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-pin-and-paper",
+   "elements": 388,
+   "text_nodes": 213,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-pink-script",
+   "elements": 252,
+   "text_nodes": 149,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 13,
+     "P1": 6,
+     "P2": 0
+    },
+    "penalty": 1360
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 13,
+     "P1": 4,
+     "P2": 2
+    },
+    "penalty": 1342
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-playful",
+   "elements": 18,
+   "text_nodes": 9,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-raw-grid",
+   "elements": 19,
+   "text_nodes": 11,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 7,
+     "P2": 0
+    },
+    "penalty": 70
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 7,
+     "P2": 0
+    },
+    "penalty": 70
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-retro-windows",
+   "elements": 39,
+   "text_nodes": 15,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 200
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 200
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-retro-zine",
+   "elements": 134,
+   "text_nodes": 75,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 21,
+     "P1": 13,
+     "P2": 3
+    },
+    "penalty": 2233
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 21,
+     "P1": 7,
+     "P2": 9
+    },
+    "penalty": 2179
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-sakura-chroma",
+   "elements": 380,
+   "text_nodes": 162,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 8,
+     "P1": 7,
+     "P2": 0
+    },
+    "penalty": 870
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 8,
+     "P1": 1,
+     "P2": 6
+    },
+    "penalty": 816
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-scatterbrain",
+   "elements": 15,
+   "text_nodes": 6,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 2,
+     "P2": 0
+    },
+    "penalty": 20
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 2,
+     "P2": 0
+    },
+    "penalty": 20
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-signal",
+   "elements": 26,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 18
+    },
+    "penalty": 118
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 18
+    },
+    "penalty": 118
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-soft-editorial",
+   "elements": 294,
+   "text_nodes": 197,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 5,
+     "P2": 0
+    },
+    "penalty": 1150
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 5,
+     "P2": 0
+    },
+    "penalty": 1150
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-stencil-tablet",
+   "elements": 317,
+   "text_nodes": 200,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 22,
+     "P1": 19,
+     "P2": 0
+    },
+    "penalty": 2390
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 22,
+     "P1": 1,
+     "P2": 18
+    },
+    "penalty": 2228
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-studio",
+   "elements": 20,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 12
+    },
+    "penalty": 112
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 12
+    },
+    "penalty": 112
+   }
+  },
+  {
+   "name": "html-ppt-zhangzara-vellum",
+   "elements": 22,
+   "text_nodes": 8,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 5,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 509
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 5,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 509
+   }
+  },
+  {
+   "name": "ib-pitch-book",
+   "elements": 57,
+   "text_nodes": 0,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 401
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 401
+   }
+  },
+  {
+   "name": "image-poster",
+   "elements": 18,
+   "text_nodes": 7,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 400
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 4,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 400
+   }
+  },
+  {
+   "name": "invoice",
+   "elements": 127,
+   "text_nodes": 81,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "kami-deck",
+   "elements": 32,
+   "text_nodes": 13,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 309
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 9
+    },
+    "penalty": 309
+   }
+  },
+  {
+   "name": "kami-landing",
+   "elements": 154,
+   "text_nodes": 105,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 3
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 3
+   }
+  },
+  {
+   "name": "kanban-board",
+   "elements": 216,
+   "text_nodes": 125,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 42,
+     "P1": 5,
+     "P2": 0
+    },
+    "penalty": 4250
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 42,
+     "P1": 4,
+     "P2": 1
+    },
+    "penalty": 4241
+   }
+  },
+  {
+   "name": "live-dashboard",
+   "elements": 262,
+   "text_nodes": 165,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 55,
+     "P1": 32,
+     "P2": 0
+    },
+    "penalty": 5820
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 55,
+     "P1": 0,
+     "P2": 32
+    },
+    "penalty": 5532
+   }
+  },
+  {
+   "name": "magazine-poster",
+   "elements": 55,
+   "text_nodes": 37,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 16,
+     "P1": 13,
+     "P2": 0
+    },
+    "penalty": 1730
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 16,
+     "P1": 0,
+     "P2": 13
+    },
+    "penalty": 1613
+   }
+  },
+  {
+   "name": "meeting-notes",
+   "elements": 146,
+   "text_nodes": 101,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 15,
+     "P1": 9,
+     "P2": 0
+    },
+    "penalty": 1590
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 15,
+     "P1": 4,
+     "P2": 5
+    },
+    "penalty": 1545
+   }
+  },
+  {
+   "name": "mobile-app",
+   "elements": 54,
+   "text_nodes": 30,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 4,
+     "P2": 0
+    },
+    "penalty": 140
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 4
+    },
+    "penalty": 104
+   }
+  },
+  {
+   "name": "mobile-onboarding",
+   "elements": 85,
+   "text_nodes": 26,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 3,
+     "P2": 0
+    },
+    "penalty": 230
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 3
+    },
+    "penalty": 203
+   }
+  },
+  {
+   "name": "motion-frames",
+   "elements": 41,
+   "text_nodes": 10,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 6,
+     "P2": 0
+    },
+    "penalty": 360
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 0,
+     "P2": 6
+    },
+    "penalty": 306
+   }
+  },
+  {
+   "name": "open-design-landing-deck",
+   "elements": 45,
+   "text_nodes": 17,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 0,
+     "P2": 11
+    },
+    "penalty": 1111
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 11,
+     "P1": 0,
+     "P2": 11
+    },
+    "penalty": 1111
+   }
+  },
+  {
+   "name": "open-design-landing",
+   "elements": 658,
+   "text_nodes": 346,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 177,
+     "P1": 11,
+     "P2": 10
+    },
+    "penalty": 17820
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 177,
+     "P1": 7,
+     "P2": 14
+    },
+    "penalty": 17784
+   }
+  },
+  {
+   "name": "orbit-general",
+   "elements": 472,
+   "text_nodes": 188,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 17,
+     "P1": 17,
+     "P2": 0
+    },
+    "penalty": 1870
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 17,
+     "P1": 0,
+     "P2": 17
+    },
+    "penalty": 1717
+   }
+  },
+  {
+   "name": "orbit-github",
+   "elements": 184,
+   "text_nodes": 76,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 6,
+     "P2": 0
+    },
+    "penalty": 260
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 4,
+     "P2": 2
+    },
+    "penalty": 242
+   }
+  },
+  {
+   "name": "orbit-gmail",
+   "elements": 162,
+   "text_nodes": 60,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 13,
+     "P2": 1
+    },
+    "penalty": 231
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 14
+    },
+    "penalty": 114
+   }
+  },
+  {
+   "name": "orbit-linear",
+   "elements": 178,
+   "text_nodes": 75,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 42,
+     "P1": 0,
+     "P2": 5
+    },
+    "penalty": 4205
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 42,
+     "P1": 0,
+     "P2": 5
+    },
+    "penalty": 4205
+   }
+  },
+  {
+   "name": "orbit-notion",
+   "elements": 77,
+   "text_nodes": 49,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 16,
+     "P2": 2
+    },
+    "penalty": 262
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 18
+    },
+    "penalty": 118
+   }
+  },
+  {
+   "name": "pm-spec",
+   "elements": 156,
+   "text_nodes": 110,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 5,
+     "P2": 0
+    },
+    "penalty": 50
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 5
+    },
+    "penalty": 5
+   }
+  },
+  {
+   "name": "pricing-page",
+   "elements": 98,
+   "text_nodes": 72,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 13,
+     "P2": 0
+    },
+    "penalty": 130
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 13
+    },
+    "penalty": 13
+   }
+  },
+  {
+   "name": "saas-landing",
+   "elements": 76,
+   "text_nodes": 54,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 8,
+     "P2": 0
+    },
+    "penalty": 80
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 8
+    },
+    "penalty": 8
+   }
+  },
+  {
+   "name": "simple-deck",
+   "elements": 6,
+   "text_nodes": 5,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 110
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 1,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 101
+   }
+  },
+  {
+   "name": "social-carousel",
+   "elements": 55,
+   "text_nodes": 24,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 24,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 2400
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 24,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 2400
+   }
+  },
+  {
+   "name": "social-media-dashboard",
+   "elements": 217,
+   "text_nodes": 94,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 92,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 9200
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 92,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 9200
+   }
+  },
+  {
+   "name": "social-media-matrix-tracker-template",
+   "elements": 313,
+   "text_nodes": 138,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 48,
+     "P1": 5,
+     "P2": 1
+    },
+    "penalty": 4851
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 48,
+     "P1": 0,
+     "P2": 6
+    },
+    "penalty": 4806
+   }
+  },
+  {
+   "name": "sprite-animation",
+   "elements": 81,
+   "text_nodes": 24,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 1,
+     "P2": 0
+    },
+    "penalty": 1210
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 12,
+     "P1": 0,
+     "P2": 1
+    },
+    "penalty": 1201
+   }
+  },
+  {
+   "name": "team-okrs",
+   "elements": 135,
+   "text_nodes": 69,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 9,
+     "P1": 5,
+     "P2": 0
+    },
+    "penalty": 950
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 9,
+     "P1": 0,
+     "P2": 5
+    },
+    "penalty": 905
+   }
+  },
+  {
+   "name": "trading-analysis-dashboard-template",
+   "elements": 4,
+   "text_nodes": 2,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "tweaks",
+   "elements": 113,
+   "text_nodes": 72,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 7,
+     "P1": 14,
+     "P2": 6
+    },
+    "penalty": 846
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 7,
+     "P1": 4,
+     "P2": 16
+    },
+    "penalty": 756
+   }
+  },
+  {
+   "name": "video-shortform",
+   "elements": 8,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 200
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 2,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 200
+   }
+  },
+  {
+   "name": "waitlist-page",
+   "elements": 72,
+   "text_nodes": 27,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 21,
+     "P1": 2,
+     "P2": 1
+    },
+    "penalty": 2121
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 21,
+     "P1": 1,
+     "P2": 2
+    },
+    "penalty": 2112
+   }
+  },
+  {
+   "name": "web-prototype-taste-brutalist",
+   "elements": 209,
+   "text_nodes": 160,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 55,
+     "P2": 0
+    },
+    "penalty": 850
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 3,
+     "P1": 25,
+     "P2": 30
+    },
+    "penalty": 580
+   }
+  },
+  {
+   "name": "web-prototype-taste-editorial",
+   "elements": 120,
+   "text_nodes": 86,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 37,
+     "P2": 0
+    },
+    "penalty": 370
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 37
+    },
+    "penalty": 37
+   }
+  },
+  {
+   "name": "web-prototype-taste-soft",
+   "elements": 146,
+   "text_nodes": 83,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 1,
+     "P2": 1
+    },
+    "penalty": 11
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 1,
+     "P2": 1
+    },
+    "penalty": 11
+   }
+  },
+  {
+   "name": "web-prototype",
+   "elements": 31,
+   "text_nodes": 18,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 2,
+     "P2": 0
+    },
+    "penalty": 20
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 2
+    },
+    "penalty": 2
+   }
+  },
+  {
+   "name": "webgl-experience",
+   "elements": 6,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "weekly-update",
+   "elements": 22,
+   "text_nodes": 8,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  },
+  {
+   "name": "wireframe-annotated",
+   "elements": 117,
+   "text_nodes": 29,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 11,
+     "P2": 0
+    },
+    "penalty": 110
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 11
+    },
+    "penalty": 11
+   }
+  },
+  {
+   "name": "wireframe-greybox",
+   "elements": 113,
+   "text_nodes": 4,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 0,
+     "P1": 4,
+     "P2": 0
+    },
+    "penalty": 40
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 4
+    },
+    "penalty": 4
+   }
+  },
+  {
+   "name": "wireframe-mobile-flow",
+   "elements": 166,
+   "text_nodes": 33,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 14,
+     "P1": 15,
+     "P2": 0
+    },
+    "penalty": 1550
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 14,
+     "P1": 2,
+     "P2": 13
+    },
+    "penalty": 1433
+   }
+  },
+  {
+   "name": "wireframe-sketch",
+   "elements": 118,
+   "text_nodes": 56,
+   "strict_aa": {
+    "passed": false,
+    "counts": {
+     "P0": 31,
+     "P1": 7,
+     "P2": 0
+    },
+    "penalty": 3170
+   },
+   "split_gate": {
+    "passed": false,
+    "counts": {
+     "P0": 31,
+     "P1": 4,
+     "P2": 3
+    },
+    "penalty": 3143
+   }
+  },
+  {
+   "name": "worker-visualizer",
+   "elements": 14,
+   "text_nodes": 8,
+   "strict_aa": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   },
+   "split_gate": {
+    "passed": true,
+    "counts": {
+     "P0": 0,
+     "P1": 0,
+     "P2": 0
+    },
+    "penalty": 0
+   }
+  }
+ ],
+ "errors": []
+}

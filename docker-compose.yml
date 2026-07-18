@@ -1,0 +1,57 @@
+# Designer Agent. Consumes kind=design tasks from a planner plan and produces
+# verified HTML artifacts.
+#
+# Bring up:  docker compose up -d
+# One task:  docker compose run --rm designer-agent run-plan /app/data/tasks/sample_tasks.json
+#
+# The model lives in agent_server's llama-vision container on :8500; this service
+# is a thin client and owns no GPU.
+
+services:
+  designer-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: designer-agent:0.1.0
+    container_name: designer-agent
+    restart: unless-stopped
+    # host networking: llama-vision (:8500) is reachable on localhost, same as
+    # analyst_agent reaches the shared services.
+    network_mode: host
+    environment:
+      # Model endpoint and identity.
+      LLAMA_URL: "http://127.0.0.1:8500"
+      DESIGNER_MODEL: "local-llama/gemma-4"
+
+      # Per-slot context of the llama-vision server. Prompt and attachment
+      # budgets derive from this, so raising --ctx-size or dropping --parallel
+      # on that service should be mirrored here -- otherwise the pipeline keeps
+      # rationing context it has already been given.
+      # Currently: --ctx-size 65536 with --parallel 1 => 65536 per slot.
+      DESIGNER_SLOT_CONTEXT: "65536"
+      # Output is sized to the ARTIFACT, not the slot. A full page is ~3-5k
+      # tokens; scaling this with the slot let reasoning run away without ever
+      # closing the document.
+      DESIGNER_MAX_TOKENS: "16384"
+
+      DESIGNER_DATA: "/app/data"
+      DESIGNER_CHROME: "/usr/bin/chromium"
+    volumes:
+      # Single-owner bind mount. Everything under data/ is either reference
+      # material we vendored (design_systems, templates, corpus) or output this
+      # agent owns (runs). Kept outside the image so packages can be added or
+      # repaired without a rebuild.
+      #   design_systems/  read-mostly  vendored from open-design (Apache-2.0)
+      #   templates/       read-mostly  vendored from open-design (Apache-2.0)
+      #   corpus/          read-only    validation fixtures
+      #   tasks/           read-write   input, written by the planner
+      #   runs/            read-write   output, owned by designer-agent
+      - ./data:/app/data
+    healthcheck:
+      # The model server is the only hard dependency.
+      test: ["CMD", "python3", "-c",
+             "import urllib.request,sys; urllib.request.urlopen('http://127.0.0.1:8500/health', timeout=5); sys.exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
