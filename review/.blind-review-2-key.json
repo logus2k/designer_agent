@@ -1,0 +1,152 @@
+[
+ {
+  "label": "A",
+  "penalty": 10,
+  "counts": {
+   "P0": 0,
+   "P1": 1,
+   "P2": 0
+  },
+  "src": "data/runs/chips/D002-0/.designer/best.html"
+ },
+ {
+  "label": "B",
+  "penalty": 20,
+  "counts": {
+   "P0": 0,
+   "P1": 2,
+   "P2": 0
+  },
+  "src": "data/runs/chips/D002-1/index.html"
+ },
+ {
+  "label": "C",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/withrule/D001-0/.designer/best.html"
+ },
+ {
+  "label": "D",
+  "penalty": 500,
+  "counts": {
+   "P0": 5,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/seeded/D002-0/.designer/best.html"
+ },
+ {
+  "label": "E",
+  "penalty": 10,
+  "counts": {
+   "P0": 0,
+   "P1": 1,
+   "P2": 0
+  },
+  "src": "data/runs/wide2/D001/.designer/best.html"
+ },
+ {
+  "label": "F",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "/tmp/conv/D002-3/.designer/best.html"
+ },
+ {
+  "label": "G",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "/tmp/conv/D001-0/.designer/best.html"
+ },
+ {
+  "label": "H",
+  "penalty": 300,
+  "counts": {
+   "P0": 3,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/wide2/D002/.designer/best.html"
+ },
+ {
+  "label": "I",
+  "penalty": 500,
+  "counts": {
+   "P0": 5,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/dedup/D002-2/.designer/best.html"
+ },
+ {
+  "label": "J",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/e2e/D001/.designer/best.html"
+ },
+ {
+  "label": "K",
+  "penalty": 10,
+  "counts": {
+   "P0": 0,
+   "P1": 1,
+   "P2": 0
+  },
+  "src": "data/runs/withrule/D002-1/.designer/best.html"
+ },
+ {
+  "label": "L",
+  "penalty": 200,
+  "counts": {
+   "P0": 2,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/dedup/D002-0/.designer/best.html"
+ },
+ {
+  "label": "M",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/wide/D002/index.html"
+ },
+ {
+  "label": "N",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/e2e2/D002/.designer/best.html"
+ },
+ {
+  "label": "O",
+  "penalty": 0,
+  "counts": {
+   "P0": 0,
+   "P1": 0,
+   "P2": 0
+  },
+  "src": "data/runs/withrule/D001-2/.designer/best.html"
+ }
+]

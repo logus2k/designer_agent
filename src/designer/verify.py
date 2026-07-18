@@ -33,8 +33,14 @@ class Thresholds:
     contrast_aa_normal: float = 4.5      # AA floor, text < 24px (or <18.66px bold)
     contrast_aa_large: float = 3.0       # AA floor, large text
     contrast_hard_floor: float = 3.0     # below this -> P0 regardless of size
-    contrast_marginal_severity: str = "P1"   # AA-fail but above hard floor
-    # set to "P2" to report-without-gating marginal contrast
+    # Strict WCAG AA, chosen deliberately: once the dashboard template shipped a
+    # seed with AA-safe chip classes, 2/4 runs cleared strict AA outright and the
+    # residual failures were single instances rather than systemic. Relaxing this
+    # to P2 would pass 4/4 -- but the failures it would stop catching are the
+    # model overriding a chip class with an inline mid-tone fill, which is exactly
+    # what the seed exists to prevent. Set to "P2" only if the gate becomes
+    # unreachable again.
+    contrast_marginal_severity: str = "P1"
 
     # --- geometry ---
     overflow_p0_px: float = 24.0         # spill beyond this -> P0, else P1
@@ -45,6 +51,10 @@ class Thresholds:
     # single strongest predictor of a page being rejected outright
     surface_collision_min: float = 0.02
     surface_collision_severity: str = "P0"
+    chart_clip_severity: str = "P0"      # plotted data escaping its viewBox
+    # Measured against human review: 6 of 9 ACCEPTED artifacts had an unlabelled
+    # chart, so this does not predict rejection. Reported, never gating.
+    chart_unlabelled_severity: str = "P2"
     overlap_min_fraction: float = 0.10   # below this, not reported at all
 
     # --- palette / targets ---
@@ -85,6 +95,18 @@ class _Parse(html.parser.HTMLParser):
             self.ok = False
 
 
+# Emoji inside a nav item, button, heading or icon slot. On a headless renderer
+# without an emoji font these become tofu boxes -- a text node with excellent
+# contrast, invisible to every geometric check. Human reviewers spot them
+# instantly; three rejected artifacts had them.
+_EMOJI = ("[\U0001F300-\U0001FAFF\U00002600-\U000027BF\U0001F000-\U0001F0FF"
+          "\U00002190-\U000021FF\U00002B00-\U00002BFF]")
+EMOJI_CONTEXTS = [
+    (r"<(h[1-6]|button|li|a)\b[^>]*>[^<]{0,40}?" + _EMOJI, "emoji inside a nav item, heading or button"),
+    (r'class="[^"]*icon[^"]*"[^>]*>\s*' + _EMOJI, "emoji used as an icon"),
+]
+
+
 STUB_PATTERNS = [
     (r"\bTODO\b", "TODO marker"),
     (r"\bFIXME\b", "FIXME marker"),
@@ -119,6 +141,13 @@ def tier1(html_text: str) -> list[dict]:
         if re.search(pat, body, re.I):
             out.append({"severity": "P0", "rule": "stub",
                         "message": f"stub fingerprint: {label}"})
+    for pat, label in EMOJI_CONTEXTS:
+        hits = re.findall(pat, html_text, re.I)
+        if hits:
+            out.append({"severity": "P1", "rule": "emoji-icon",
+                        "message": f"{len(hits)} x {label} -- renders as a tofu "
+                                   f"box wherever the emoji font is absent; use "
+                                   f"inline SVG or a text label"})
     return out
 
 
@@ -200,6 +229,21 @@ def tier2(audit: dict, required_components: list[str] | None = None,
                     "message": f'{ka} is drawn over {kb}'
                                f'{count} -- {int(c["fraction"] * 100)}% of the '
                                f'smaller element is covered{where}'})
+
+    for c in audit.get("chart_faults", []):
+        if c["outside_count"]:
+            pts = ", ".join(f'({o["x"]},{o["y"]})' for o in c["outside"][:3])
+            vb = c["viewBox"]
+            out.append({"severity": th.chart_clip_severity, "rule": "chart-clipped",
+                        "path": c["path"],
+                        "message": f'{c["path"]} plots {c["outside_count"]} point(s) '
+                                   f'outside its viewBox {vb[2]}x{vb[3]} -- {pts} '
+                                   f'-- that data is clipped and invisible'})
+        if not c["text_labels"]:
+            out.append({"severity": th.chart_unlabelled_severity,
+                        "rule": "chart-unlabelled", "path": c["path"],
+                        "message": f'{c["path"]} has no <text> labels: an axis-less '
+                                   f'frame with a line in it cannot be read'})
 
     for e in audit.get("edge_touching", []):
         if e["gap_px"] >= th.edge_gutter_min_px:

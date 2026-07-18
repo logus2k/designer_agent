@@ -293,6 +293,57 @@ function collect() {
   }
   collisions.sort((x, y) => y.fraction - x.fraction);
 
+  /* ---------- 2a3. chart geometry ---------- */
+  /* SVG internals are not DOM boxes, so a plotted line leaving its viewBox is
+   * invisible to every element-level check -- the data is simply clipped away.
+   * A human reviewer sees it instantly ("the line falls off the bottom"). */
+  const chartFaults = [];
+  for (const svg of document.querySelectorAll('svg[viewBox]')) {
+    const vb = (svg.getAttribute('viewBox') || '').split(/[\s,]+/).map(Number);
+    if (vb.length !== 4 || vb.some(isNaN)) continue;
+    const [vx, vy, vw, vh] = vb;
+    const out = [];
+    const note = (kind, x, y) => {
+      if (x < vx - 1 || x > vx + vw + 1 || y < vy - 1 || y > vy + vh + 1)
+        out.push({ kind, x: Math.round(x), y: Math.round(y) });
+    };
+    /* SVG `points` accepts commas and whitespace interchangeably: "50,300 250,250",
+     * "50 300, 250 250" and "50 300 250 250" are all the same six coordinates.
+     * Splitting on whitespace then commas silently parsed nothing for the middle
+     * form -- which is exactly the form the model emitted, so a point 50 units
+     * below the plot went undetected. Flatten to a number stream instead. */
+    for (const el of svg.querySelectorAll('polyline, polygon')) {
+      const nums = (el.getAttribute('points') || '')
+        .split(/[\s,]+/).filter(Boolean).map(Number).filter(n => !isNaN(n));
+      for (let k = 0; k + 1 < nums.length; k += 2)
+        note(el.tagName.toLowerCase(), nums[k], nums[k + 1]);
+    }
+    for (const el of svg.querySelectorAll('rect')) {
+      const x = +el.getAttribute('x'), y = +el.getAttribute('y');
+      const w = +el.getAttribute('width'), h = +el.getAttribute('height');
+      if (![x, y, w, h].some(isNaN)) { note('rect', x, y); note('rect', x + w, y + h); }
+    }
+    for (const el of svg.querySelectorAll('circle')) {
+      const cx = +el.getAttribute('cx'), cy = +el.getAttribute('cy');
+      if (![cx, cy].some(isNaN)) note('circle', cx, cy);
+    }
+    /* Only a data plot qualifies: a polyline/polygon with >2 vertices, or 3+
+     * sibling rects (a bar series). Decorative icons have neither, and treating
+     * them as unlabelled charts fired on every landing page in the sample. */
+    let series = svg.querySelectorAll('rect').length >= 3;
+    for (const el of svg.querySelectorAll('polyline, polygon')) {
+      if ((el.getAttribute('points') || '').trim().split(/\s+/).length > 2) series = true;
+    }
+    const labels = svg.querySelectorAll('text').length;
+    if (out.length || (series && labels === 0)) {
+      chartFaults.push({
+        path: pathOf(svg), viewBox: [vx, vy, vw, vh],
+        outside: out.slice(0, 6), outside_count: out.length,
+        text_labels: labels, is_series: series,
+      });
+    }
+  }
+
   /* ---------- 2b. edge gutter ---------- */
   /* Text touching the viewport edge reads as broken even though it neither
    * overflows nor overlaps -- a generated page put its logo at x=0 and every
@@ -404,6 +455,7 @@ function collect() {
     overflow, content_overflow: contentOverflow,
     overlaps, overlaps_truncated: overlapsTruncated,
     surface_collisions: collisions,
+    chart_faults: chartFaults,
     edge_touching: edgeTouching,
     text_contrast: textContrast,
     off_palette: offPalette, components, targets,

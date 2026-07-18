@@ -93,20 +93,52 @@ def complete(prompt: str, system: str | None = None,
     }
 
 
+# Appended on retry after a runaway-reasoning turn. Observed failure: 114,157
+# characters of reasoning and ZERO content, the entire token budget spent
+# thinking. Re-sending the same prompt just burns another iteration, so the
+# retry explicitly suppresses deliberation.
+_TERSE = ("\n\nIMPORTANT: do not deliberate, plan, or explain. Begin your reply "
+          "with `<!DOCTYPE html>` immediately and output nothing else.")
+
+
 def generate_html(prompt: str, system: str | None = None,
                   max_tokens: int = MAX_TOKENS,
                   temperature: float = 0.3,
-                  timeout: float = 900) -> tuple[str | None, dict]:
-    """Generate one HTML artifact. Returns (html_or_None, meta)."""
-    r = complete(prompt, system=system, max_tokens=max_tokens,
-                 temperature=temperature, timeout=timeout)
-    html = extract_html(r["text"])
-    meta = {"usage": r["usage"], "truncated": r["truncated"],
-            "reasoning_chars": len(r["reasoning"]),
-            "response_chars": len(r["text"])}
-    if html is None and r["truncated"]:
-        meta["error"] = "output hit the token limit before the document closed"
-    elif html is None:
-        meta["error"] = "no HTML document found in the response"
-        meta["head"] = r["text"][:400]
-    return html, meta
+                  timeout: float = 900,
+                  retries: int = 1) -> tuple[str | None, dict]:
+    """Generate one HTML artifact. Returns (html_or_None, meta).
+
+    Retries once when the model produced no usable document, because the two
+    observed causes are both transient: reasoning that never terminates, and a
+    document truncated by the token ceiling. A retry that nudges toward terse
+    output recovers both far more cheaply than losing a whole revision round.
+    """
+    attempts = []
+    for attempt in range(retries + 1):
+        p = prompt if attempt == 0 else prompt + _TERSE
+        # Lower temperature on retry: the failure mode is rambling, not a lack
+        # of ideas.
+        t = temperature if attempt == 0 else min(temperature, 0.15)
+        r = complete(p, system=system, max_tokens=max_tokens,
+                     temperature=t, timeout=timeout)
+        html = extract_html(r["text"])
+        meta = {"usage": r["usage"], "truncated": r["truncated"],
+                "reasoning_chars": len(r["reasoning"]),
+                "response_chars": len(r["text"]),
+                "attempt": attempt + 1}
+        if html is not None:
+            if attempt:
+                meta["recovered_after_retry"] = True
+            return html, meta
+        if r["truncated"] and not r["text"].strip():
+            meta["error"] = ("model spent the whole budget reasoning and emitted "
+                             "no content")
+        elif r["truncated"]:
+            meta["error"] = "output hit the token limit before the document closed"
+        else:
+            meta["error"] = "no HTML document found in the response"
+            meta["head"] = r["text"][:400]
+        attempts.append(meta)
+    final = attempts[-1]
+    final["attempts"] = len(attempts)
+    return None, final
