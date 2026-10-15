@@ -393,6 +393,8 @@ function collect() {
     if (!isFinite(worst)) continue;
     textContrast.push({
       path: pathOf(b.el), ratio: +worst.toFixed(2),
+      rect: [Math.round(b.r.left), Math.round(b.r.top),
+             Math.round(b.r.width), Math.round(b.r.height)],
       fg: hex(fg), bg: worstBg ? hex(worstBg) : null,
       font_px: +size.toFixed(1), weight, large,
       text: (b.el.textContent || '').trim().slice(0, 60),
